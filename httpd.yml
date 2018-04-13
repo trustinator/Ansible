@@ -1,6 +1,6 @@
 - hosts: all
   become: yes
-  become_user: ansible
+  become_user: root
   become_method: su
   tasks:
   - name: install apache
