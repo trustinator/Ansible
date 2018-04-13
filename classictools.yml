@@ -1,0 +1,18 @@
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: su
+  tasks:
+  - name: install common packages
+    yum:
+      update_cache=yes
+      state=latest
+      name={{item}}
+    with_items: 
+    - tar
+    - unzip
+    - vim
+    - wget
+    - whois
+    - screen
+    - nano
