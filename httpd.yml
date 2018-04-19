@@ -6,7 +6,7 @@
   - name: install apache
     yum:
       update_cache=yes
-      state=inst_answer
+      state=latest
       name={{item}}
     with_items: 
     - httpd
